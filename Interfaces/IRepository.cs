@@ -1,21 +1,15 @@
-﻿using System.Collections.Generic;
-
-namespace FHSWebServiceApplication.Interfaces
+﻿namespace FHSWebServiceApplication.Interfaces
 {
-  public interface IRepository<TEntity>
-  {
-    // Create
-    TEntity Create(TEntity entity);
+    public interface IRepository<TEntity>
+    {
+        TEntity Create(TEntity entity);
 
-    // Read
-    TEntity GetById(int id);
-    IEnumerable<TEntity> GetAll();
+        TEntity GetById(int id);
 
-    // Update
-    TEntity Update(TEntity entity);
+        IEnumerable<TEntity> GetAll();
 
-    // Delete
-    void Delete(int id);
-  }
+        TEntity Update(TEntity entity);
 
+        void Delete(int id);
+    }
 }
